@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ven Channy - Web Developer</title>
+    <title>Ven Channy - Junior Web Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Left Sidebar Navigation --> 
+    <!-- Top Controls: Theme & Language Toggle -->
+    <div class="top-controls">
+        <button id="themeToggle" class="control-btn" title="Toggle theme" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button id="langToggle" class="control-btn lang-btn" title="Switch language" aria-label="Switch language">
+            <span class="lang-label">KH</span>
+        </button>
+    </div>
+
+    <!-- Left Sidebar Navigation -->
     <nav class="sidebar">
         <div class="profile-container">
             <img src="imags/channy.jpg" alt="Ven Channy" class="profile-img">
         </div>
         <ul class="nav-menu">
-            <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About Me</a></li>
-            <li><a href="#resume" class="nav-link"><i class="fas fa-file-alt"></i> Resume</a></li>
-            <li><a href="#portfolio" class="nav-link"><i class="fas fa-briefcase"></i>Project</a></li>
-            <li><a href="#testimonials" class="nav-link"><i class="fas fa-comments"></i> Soft Skills</a></li>
-            <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> <span data-i18n="nav.home">Home</span></a></li>
+            <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> <span data-i18n="nav.about">About Me</span></a></li>
+            <li><a href="#resume" class="nav-link"><i class="fas fa-file-alt"></i> <span data-i18n="nav.resume">Resume</span></a></li>
+            <li><a href="#portfolio" class="nav-link"><i class="fas fa-briefcase"></i> <span data-i18n="nav.project">Project</span></a></li>
+            <li><a href="#testimonials" class="nav-link"><i class="fas fa-comments"></i> <span data-i18n="nav.softSkills">Soft Skills</span></a></li>
+            <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> <span data-i18n="nav.contact">Contact</span></a></li>
         </ul>
     </nav>
 
@@ -29,13 +42,18 @@
         <section id="home" class="section active">
             <div class="hero-content">
                 <div class="hero-left">
-                    <h1 class="greeting">HI THERE!</h1>
-                    <h2 class="name">I'M Channy</h2>
-                    <p class="subtitle">I am a Web Developer</p>
-                    <p class="description">
+                    <h1 class="greeting" data-i18n="hero.greeting">Welcome to my Portfolio🙏🌷</h1>
+                    <h2 class="name" data-i18n="hero.name">I'M Channy</h2>
+                    <p class="subtitle" data-i18n="hero.subtitle">I am a Web Developer</p>
+                    <p class="description" data-i18n="hero.description">
                         I’m a passionate Web Developer focused on building clean, responsive, and user-friendly websites. I enjoy turning ideas into real, functional products using modern web technologies. With a strong foundation in front-end development and a continuous desire to learn, I strive to create engaging digital experiences that are both visually appealing and efficient.
                     </p>
-                    <button class="cta-button" onclick="scrollToSection('about')">More About Me</button>
+                    <div class="hero-buttons">
+                        <button class="cta-button" onclick="scrollToSection('about')" data-i18n="hero.moreAbout">More About Me</button>
+                        <a href="Ven Channy-CV.pdf" download class="cta-button cta-outline">
+                            <i class="fas fa-download"></i> <span data-i18n="hero.downloadCV">Download CV</span>
+                        </a>
+                    </div>
                 </div>
                 <div class="hero-right">
                     <div class="profile-large">
@@ -53,45 +71,45 @@
                     <img src="imags/me.jpg" alt="Ven Channy" class="about-profile-img">
                 </div>
                 <div class="about-right">
-                    <h2 class="section-title">ABOUT ME</h2>
-                    <h3 class="about-name">I'm Ven Channy, Web Developer / Product Owner</h3>
-                    <p class="about-description">
-                        I'm a creative professional with a passion for visual storytelling. My work spans across 
+                    <h2 class="section-title" data-i18n="about.title">ABOUT ME</h2>
+                    <h3 class="about-name" data-i18n="about.name">I'm Ven Channy, Web Developer / Product Owner</h3>
+                    <p class="about-description" data-i18n="about.description">
+                        I'm a creative professional with a passion for visual storytelling. My work spans across
                         print design, web design, and photography, helping brands and individuals bring their visions to life.
                     </p>
-                    
+
                     <div class="what-i-do">
-                        <h4><span>What I Do</span></h4>
+                        <h4><span data-i18n="about.whatIDo">What I Do</span></h4>
                         <div class="services">
                             <div class="service-item">
                                 <i class="fas fa-print"></i>
-                                <span>Build Website & System</span>
+                                <span data-i18n="about.service1">Build Website & System</span>
                             </div>
                             <div class="service-item">
                                 <i class="fas fa-laptop"></i>
-                                <span>Web Development</span>
+                                <span data-i18n="about.service2">Web Development</span>
                             </div>
                             <div class="service-item">
                                 <i class="fas fa-camera"></i>
-                                <span>UX/UI Designer</span>
+                                <span data-i18n="about.service3">UX/UI Designer</span>
                             </div>
                             <div class="service-item">
                                 <i class="fas fa-file-alt"></i>
-                                <span>QA Tester</span>
+                                <span data-i18n="about.service4">QA Tester</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="fun-facts">
-                        <h4><span>Fun Facts</span></h4>
+                        <h4><span data-i18n="about.funFacts">Fun Facts</span></h4>
                         <div class="stats-grid">
                             <div class="stat-card">
                                 <div class="stat-number">0</div>
-                                <div class="stat-label">Years Experience</div>
+                                <div class="stat-label" data-i18n="about.yearsExp">Years Experience</div>
                             </div>
                             <div class="stat-card">
                                 <div class="stat-number">6</div>
-                                <div class="stat-label">Projects Done</div>
+                                <div class="stat-label" data-i18n="about.projectsDone">Projects Done</div>
                             </div>
                             <!-- <div class="stat-card">
                                 <div class="stat-number">65</div>
@@ -117,68 +135,68 @@
 
         <!-- Resume Section -->
         <section id="resume" class="section">
-            <h2 class="section-title">RESUME</h2>
+            <h2 class="section-title" data-i18n="resume.title">RESUME</h2>
             <div class="resume-content">
                 <div class="resume-column">
-                    <h3 class="resume-subtitle">Education</h3>
+                    <h3 class="resume-subtitle" data-i18n="resume.education">Education</h3>
                     <div class="resume-item">
                         <i class="fas fa-graduation-cap"></i>
                         <div class="resume-details">
-                            <h4>Associate Degree in Passerelles Numeriques Cambodia (PNC)</h4>
+                            <h4 data-i18n="resume.edu1Title">Associate Degree in Passerelles Numeriques Cambodia (PNC)</h4>
                             <p class="resume-institution">2025 - 2027</p>
-                            <p class="resume-description">Focused on visual communication, Web Development, and UX/UI design.</p>
+                            <p class="resume-description" data-i18n="resume.edu1Desc">Focused on visual communication, Web Development, and UX/UI design.</p>
                         </div>
                     </div>
                     <div class="resume-item">
                         <i class="fas fa-certificate"></i>
                         <div class="resume-details">
-                            <h4>Hun Sen Kompong Leng Hight School</h4>
+                            <h4 data-i18n="resume.edu2Title">Hun Sen Kompong Leng Hight School</h4>
                             <p class="resume-institution">2022 - 2024</p>
-                            <p class="resume-description">Advanced techniques in portrait, product, and commercial photography.</p>
+                            <p class="resume-description" data-i18n="resume.edu2Desc">Advanced techniques in portrait, product, and commercial photography.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="resume-column">
-                    <h3 class="resume-subtitle">Experience of Project</h3>
+                    <h3 class="resume-subtitle" data-i18n="resume.experience">Experience of Project</h3>
                     <div class="resume-item">
                         <i class="fas fa-briefcase"></i>
                         <div class="resume-details">
-                            <h4>School Website</h4>
-                            <p class="resume-institution">Indeviual - Present</p>
-                            <p class="resume-description">Lead designer for major brand campaigns, managing a team of 5 junior designers.</p>
+                            <h4 data-i18n="resume.exp1Title">School Website</h4>
+                            <p class="resume-institution" data-i18n="resume.exp1Inst">Indeviual - Present</p>
+                            <p class="resume-description" data-i18n="resume.exp1Desc">Lead designer for major brand campaigns, managing a team of 5 junior designers.</p>
                         </div>
                     </div>
                     <div class="resume-item">
                         <i class="fas fa-camera-retro"></i>
                         <div class="resume-details">
-                            <h4>Restaurant Website</h4>
-                            <p class="resume-institution">Indeviual - Present</p>
-                            <p class="resume-description">Commercial and portrait photography for various clients and publications.</p>
+                            <h4 data-i18n="resume.exp2Title">Restaurant Website</h4>
+                            <p class="resume-institution" data-i18n="resume.exp2Inst">Indeviual - Present</p>
+                            <p class="resume-description" data-i18n="resume.exp2Desc">Commercial and portrait photography for various clients and publications.</p>
                         </div>
                     </div>
                     <div class="resume-item">
                         <i class="fas fa-camera-retro"></i>
                         <div class="resume-details">
-                            <h4>Inventory System</h4>
-                            <p class="resume-institution">Teamwork - Present</p>
-                            <p class="resume-description">Commercial and portrait photography for various clients and publications.</p>
+                            <h4 data-i18n="resume.exp3Title">Inventory System</h4>
+                            <p class="resume-institution" data-i18n="resume.exp3Inst">Teamwork - Present</p>
+                            <p class="resume-description" data-i18n="resume.exp3Desc">Commercial and portrait photography for various clients and publications.</p>
                         </div>
                     </div>
                     <div class="resume-item">
                         <i class="fas fa-camera-retro"></i>
                         <div class="resume-details">
-                            <h4>JavaScript Project</h4>
-                            <p class="resume-institution">Teamwork - Present</p>
-                            <p class="resume-description">Commercial and portrait photography for various clients and publications.</p>
+                            <h4 data-i18n="resume.exp4Title">JavaScript Project</h4>
+                            <p class="resume-institution" data-i18n="resume.exp4Inst">Teamwork - Present</p>
+                            <p class="resume-description" data-i18n="resume.exp4Desc">Commercial and portrait photography for various clients and publications.</p>
                         </div>
                     </div>
                     <div class="resume-item">
                         <i class="fas fa-camera-retro"></i>
                         <div class="resume-details">
-                            <h4>Portfolio Website</h4>
-                            <p class="resume-institution">Indeviual - Myself</p>
-                            <p class="resume-description">Commercial and portrait photography for various clients and publications.</p>
+                            <h4 data-i18n="resume.exp5Title">Portfolio Website</h4>
+                            <p class="resume-institution" data-i18n="resume.exp5Inst">Indeviual - Myself</p>
+                            <p class="resume-description" data-i18n="resume.exp5Desc">Commercial and portrait photography for various clients and publications.</p>
                         </div>
                     </div>
                 </div>
@@ -187,59 +205,59 @@
 
         <!-- Portfolio Section -->
         <section id="portfolio" class="section">
-            <h2 class="section-title">PROJECT</h2>
+            <h2 class="section-title" data-i18n="portfolio.title">PROJECT</h2>
             <div class="portfolio-tabs">
-                <button class="tab-button active" data-category="all">All</button>
-                <button class="tab-button" data-category="website">Website</button>
-                <button class="tab-button" data-category="system">System</button>
-                <button class="tab-button" data-category="design">Design</button>
+                <button class="tab-button active" data-category="all" data-i18n="portfolio.all">All</button>
+                <button class="tab-button" data-category="website" data-i18n="portfolio.website">Website</button>
+                <button class="tab-button" data-category="system" data-i18n="portfolio.system">System</button>
+                <button class="tab-button" data-category="design" data-i18n="portfolio.design">Design</button>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-category="website">
                     <img src="imags/restaurant.jpg" alt="Restaurant Website">
                     <div class="portfolio-overlay">
-                        <h4>Restaurant Website</h4>
-                        <p>Modern restaurant booking system with menu showcase</p>
-                        <a href="https://restaurant-website-channy.vercel.app" target="_blank" class="portfolio-link">View Project →</a>
+                        <h4 data-i18n="portfolio.p1Title">Restaurant Website</h4>
+                        <p data-i18n="portfolio.p1Desc">Modern restaurant booking system with menu showcase</p>
+                        <a href="https://restaurant-website-channy.vercel.app" target="_blank" class="portfolio-link" data-i18n="portfolio.viewProject">View Project →</a>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="website">
                     <img src="imags/pnc-school.jpg" alt="PNC School Website">
                     <div class="portfolio-overlay">
-                        <h4>PNC School Website</h4>
-                        <p>Educational institution portal with activities and admissions</p>
-                        <a href="https://pnc-website-two.vercel.app" target="_blank" class="portfolio-link">View Project →</a>
+                        <h4 data-i18n="portfolio.p2Title">PNC School Website</h4>
+                        <p data-i18n="portfolio.p2Desc">Educational institution portal with activities and admissions</p>
+                        <a href="https://pnc-website-two.vercel.app" target="_blank" class="portfolio-link" data-i18n="portfolio.viewProject">View Project →</a>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="website">
                     <img src="imags/komrong-booking.jpg" alt="Komrong Trip Booking">
                     <div class="portfolio-overlay">
-                        <h4>Komrong Trip Booking</h4>
-                        <p>Travel and accommodation booking application</p>
-                        <a href="https://vc-1-trip-booking.vercel.app" target="_blank" class="portfolio-link">View Project →</a>
+                        <h4 data-i18n="portfolio.p3Title">Komrong Trip Booking</h4>
+                        <p data-i18n="portfolio.p3Desc">Travel and accommodation booking application</p>
+                        <a href="https://vc-1-trip-booking.vercel.app" target="_blank" class="portfolio-link" data-i18n="portfolio.viewProject">View Project →</a>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="system">
                     <img src="imags/inventory-system.jpg" alt="Inventory System">
                     <div class="portfolio-overlay">
-                        <h4>Inventory Management System</h4>
-                        <p>Complete inventory tracking and management solution</p>
-                        <a href="https://inventory-eight-psi.vercel.app" target="_blank" class="portfolio-link">View Project →</a>
+                        <h4 data-i18n="portfolio.p4Title">Inventory Management System</h4>
+                        <p data-i18n="portfolio.p4Desc">Complete inventory tracking and management solution</p>
+                        <a href="https://inventory-eight-psi.vercel.app" target="_blank" class="portfolio-link" data-i18n="portfolio.viewProject">View Project →</a>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="design">
                     <img src="imags/figma-designs.jpg" alt="Figma UI Designs">
                     <div class="portfolio-overlay">
-                        <h4>Mobile App UI Designs</h4>
-                        <p>Professional UI/UX designs for mobile applications</p>
+                        <h4 data-i18n="portfolio.p5Title">Mobile App UI Designs</h4>
+                        <p data-i18n="portfolio.p5Desc">Professional UI/UX designs for mobile applications</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="website">
                     <img src="imags/portfolio-website.jpg" alt="Portfolio Website">
                     <div class="portfolio-overlay">
-                        <h4>Personal Portfolio</h4>
-                        <p>Responsive portfolio showcasing projects and skills</p>
-                        <a href="#" class="portfolio-link">Current Project →</a>
+                        <h4 data-i18n="portfolio.p6Title">Personal Portfolio</h4>
+                        <p data-i18n="portfolio.p6Desc">Responsive portfolio showcasing projects and skills</p>
+                        <a href="#" class="portfolio-link" data-i18n="portfolio.currentProject">Current Project →</a>
                     </div>
                 </div>
             </div>
@@ -247,7 +265,7 @@
 
         <!-- Testimonials Section -->
         <section id="testimonials" class="section">
-            <h2 class="section-title">SOFT SKILLS</h2>
+            <h2 class="section-title" data-i18n="skills.title">SOFT SKILLS</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <img src="imags/teamwork.jpg" alt="Client 1" class="client-img">
@@ -259,9 +277,9 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"Collaborating effectively with developers, designers, and testers to complete projects successfully."</p>
-                        <h4 class="client-name">Team Work</h4>
-                        <p class="client-title">First</p>
+                        <p class="testimonial-text" data-i18n="skills.s1Text">"Collaborating effectively with developers, designers, and testers to complete projects successfully."</p>
+                        <h4 class="client-name" data-i18n="skills.s1Name">Team Work</h4>
+                        <p class="client-title" data-i18n="skills.s1Order">First</p>
                     </div>
                 </div>
                 <div class="testimonial-card">
@@ -274,9 +292,9 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"Prioritizing tasks efficiently to meet deadlines without compromising code quality. "</p>
-                        <h4 class="client-name">Time Management</h4>
-                        <p class="client-title">Second</p>
+                        <p class="testimonial-text" data-i18n="skills.s2Text">"Prioritizing tasks efficiently to meet deadlines without compromising code quality. "</p>
+                        <h4 class="client-name" data-i18n="skills.s2Name">Time Management</h4>
+                        <p class="client-title" data-i18n="skills.s2Order">Second</p>
                     </div>
                 </div>
                 <div class="testimonial-card">
@@ -289,9 +307,9 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"Ability to analyze complex issues and develop efficient, logical coding solutions."</p>
-                        <h4 class="client-name">Problem-Solving</h4>
-                        <p class="client-title">Third</p>
+                        <p class="testimonial-text" data-i18n="skills.s3Text">"Ability to analyze complex issues and develop efficient, logical coding solutions."</p>
+                        <h4 class="client-name" data-i18n="skills.s3Name">Problem-Solving</h4>
+                        <p class="client-title" data-i18n="skills.s3Order">Third</p>
                     </div>
                 </div>
                 <div class="testimonial-card">
@@ -304,9 +322,9 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"Evaluating different approaches carefully before implementing the most effective solution."</p>
-                        <h4 class="client-name">Critical Thinking</h4>
-                        <p class="client-title">Four</p>
+                        <p class="testimonial-text" data-i18n="skills.s4Text">"Evaluating different approaches carefully before implementing the most effective solution."</p>
+                        <h4 class="client-name" data-i18n="skills.s4Name">Critical Thinking</h4>
+                        <p class="client-title" data-i18n="skills.s4Order">Four</p>
                     </div>
                 </div>
                 <div class="testimonial-card">
@@ -319,9 +337,9 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"Clearly explaining technical concepts to teammates, stakeholders, and non-technical clients."</p>
-                        <h4 class="client-name">Communication</h4>
-                        <p class="client-title">Five</p>
+                        <p class="testimonial-text" data-i18n="skills.s5Text">"Clearly explaining technical concepts to teammates, stakeholders, and non-technical clients."</p>
+                        <h4 class="client-name" data-i18n="skills.s5Name">Communication</h4>
+                        <p class="client-title" data-i18n="skills.s5Order">Five</p>
                     </div>
                 </div>
                 <div class="testimonial-card">
@@ -334,9 +352,9 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"Quickly learning new technologies, tools, and adjusting to changing project requirements."</p>
-                        <h4 class="client-name">Adaptability</h4>
-                        <p class="client-title">Six</p>
+                        <p class="testimonial-text" data-i18n="skills.s6Text">"Quickly learning new technologies, tools, and adjusting to changing project requirements."</p>
+                        <h4 class="client-name" data-i18n="skills.s6Name">Adaptability</h4>
+                        <p class="client-title" data-i18n="skills.s6Order">Six</p>
                     </div>
                 </div>
             </div>
@@ -344,9 +362,9 @@
 
         <!-- Contact Section -->
         <section id="contact" class="section">
-            <h2 class="section-title">CONTACT</h2>
+            <h2 class="section-title" data-i18n="contact.title">CONTACT</h2>
             <div class="contact-content">
-                <p class="contact-message">I'd love to hear from you! Whether you have a project in mind or just want to connect, feel free to reach out.</p>
+                <p class="contact-message" data-i18n="contact.message">I'd love to hear from you! Whether you have a project in mind or just want to connect, feel free to reach out.</p>
                 <div class="contact-methods">
                     <div class="contact-item">
                         <i class="fas fa-briefcase"></i>
@@ -369,7 +387,7 @@
                         <span>linkedin.com/in/ven-channy-013276394</span>
                     </div>
                 </div>
-                <p class="footer-text">THANKS FOR PATIENCE!</p>
+                <p class="footer-text" data-i18n="contact.footer">THANKS FOR PATIENCE!</p>
             </div>
         </section>
     </main>
